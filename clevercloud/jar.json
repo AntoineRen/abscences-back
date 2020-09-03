@@ -4,6 +4,6 @@
     "goal": "clean package -Pprod -Dmaven.test.skip=true"
   },
   "deploy": {
-    "jarName": "back.war"
+    "jarName": "target/back.jar"
   }
 }
