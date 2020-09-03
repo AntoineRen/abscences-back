@@ -37,15 +37,15 @@ public class AuthentificationCtrl {
 	@PostMapping("/auth")
 	public ResponseEntity<?> authenticate(@RequestBody InfosAuthentification infos){
 		
-		return this.utilisateurRepository.findByNomUtilisateur(infos.getNomUtilisateur())
-				.filter(utilisateur -> passwordEncoder.matches(infos.getMotDePasse(), utilisateur.getMotDePasse()))
+		return this.utilisateurRepository.findByEmail(infos.getEmail())
+				.filter(utilisateur -> passwordEncoder.matches(infos.getPassword(), utilisateur.getMotDePasse()))
 				.map(utilisateur -> {
 					
 					Map<String,Object> infosSupplementairesToken = new HashMap<>();
 					infosSupplementairesToken.put("roles", utilisateur.getRoles());
 					
 					String jetonJWT = Jwts.builder()
-							.setSubject(utilisateur.getNomUtilisateur())
+							.setSubject(utilisateur.getEmail())
 							.addClaims(infosSupplementairesToken)
 							.setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getExpiresIn() * 1000))
 							.signWith(io.jsonwebtoken.SignatureAlgorithm.HS512, jwtConfig.getSecret())

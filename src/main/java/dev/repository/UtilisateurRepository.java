@@ -8,6 +8,6 @@ import dev.entites.Utilisateur;
 
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Integer> {
 	
-	Optional<Utilisateur> findByNomUtilisateur(String nomUtilisateur);
+	Optional<Utilisateur> findByEmail(String email);
 	
 }

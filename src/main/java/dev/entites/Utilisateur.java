@@ -17,7 +17,7 @@ public class Utilisateur {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	private String nomUtilisateur;
+	private String email;
 	
 	private String motDePasse;
 	
@@ -28,9 +28,9 @@ public class Utilisateur {
 		super();
 	}
 
-	public Utilisateur(String nomUtilisateur, String motDePasse, List<String> roles) {
+	public Utilisateur(String email, String motDePasse, List<String> roles) {
 		super();
-		this.nomUtilisateur = nomUtilisateur;
+		this.email = email;
 		this.motDePasse = motDePasse;
 		this.roles = roles;
 	}
@@ -43,12 +43,12 @@ public class Utilisateur {
 		this.id = id;
 	}
 
-	public String getNomUtilisateur() {
-		return nomUtilisateur;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setNomUtilisateur(String nomUtilisateur) {
-		this.nomUtilisateur = nomUtilisateur;
+	public void setEmail(String nomUtilisateur) {
+		this.email = nomUtilisateur;
 	}
 
 	public String getMotDePasse() {

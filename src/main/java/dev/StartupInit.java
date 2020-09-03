@@ -25,11 +25,11 @@ public class StartupInit {
 	@EventListener(ContextRefreshedEvent.class)
 	public void init() {
 		
-		utilisateurRepository.save(new Utilisateur("employe", passwordEncoder.encode("bestpassword"), 
+		utilisateurRepository.save(new Utilisateur("employe@dev.fr", passwordEncoder.encode("bestpassword"), 
 				Arrays.asList("ROLE_EMPLOYE")));
-		utilisateurRepository.save(new Utilisateur("manager", passwordEncoder.encode("bestpassword"), 
+		utilisateurRepository.save(new Utilisateur("manager@dev.fr", passwordEncoder.encode("bestpassword"), 
 				Arrays.asList("ROLE_EMPLOYE","ROLE_MANAGER")));
-		utilisateurRepository.save(new Utilisateur("admin", passwordEncoder.encode("bestpassword"), 
+		utilisateurRepository.save(new Utilisateur("admin@dev.fr", passwordEncoder.encode("bestpassword"), 
 				Arrays.asList("ROLE_EMPLOYE","ROLE_MANAGER","ROLE_ADMIN")));
 	}
 	

@@ -2,24 +2,24 @@ package dev.security;
 
 public class InfosAuthentification {
 
-	private String nomUtilisateur;
+	private String email;
 	
-	private String motDePasse;
+	private String password;
 
-	public String getNomUtilisateur() {
-		return nomUtilisateur;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setNomUtilisateur(String nomUtilisateur) {
-		this.nomUtilisateur = nomUtilisateur;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getMotDePasse() {
-		return motDePasse;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setMotDePasse(String motDepasse) {
-		this.motDePasse = motDepasse;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }
