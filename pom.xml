@@ -70,9 +70,9 @@
 	</dependencies>
 
 	<build>
+		<finalName>back</finalName>
 		<plugins>
 			<plugin>
-				<finalName>back</finalName>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
